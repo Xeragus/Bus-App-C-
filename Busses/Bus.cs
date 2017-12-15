@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Busses
 {
-    class Bus
+    public class Bus
     {
         public string RegistrationNumber { get; set; }
         public string Name { get; set; }
@@ -18,6 +18,11 @@ namespace Busses
             RegistrationNumber = registrationNumber;
             Name = name;
             IsLocal = isLocal;
+        }
+
+        public void AddLine(Line line)
+        {
+            Lines.Add(line);
         }
 
         public override string ToString()

@@ -12,6 +12,8 @@ namespace Busses
 {
     public partial class AddBus : Form
     {
+        public Bus Bus { get; set; }
+
         public AddBus()
         {
             InitializeComponent();
@@ -53,6 +55,18 @@ namespace Busses
                 errorProvider1.SetError(tbRegistration, null);
                 e.Cancel = false;
             }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //string registrationNumber, string name, bool isLocal
+            Bus = new Bus(tbRegistration.Text, tbName.Text, ckbLocalBus.Checked);
+            DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Busses
 {
-    class Line
+    public class Line
     {
         public string Destination { get; set; }
         public int DepartureHour { get; set; }

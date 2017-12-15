@@ -36,6 +36,11 @@
             this.btnDeleteBus = new System.Windows.Forms.Button();
             this.btnAddLine = new System.Windows.Forms.Button();
             this.gbLines = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbMostExpensive = new System.Windows.Forms.TextBox();
+            this.tbAveragePrice = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.gbLines.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbBusses
@@ -90,6 +95,7 @@
             this.btnDeleteBus.TabIndex = 5;
             this.btnDeleteBus.Text = "Delete bus";
             this.btnDeleteBus.UseVisualStyleBackColor = true;
+            this.btnDeleteBus.Click += new System.EventHandler(this.btnDeleteBus_Click);
             // 
             // btnAddLine
             // 
@@ -103,12 +109,48 @@
             // 
             // gbLines
             // 
+            this.gbLines.Controls.Add(this.tbAveragePrice);
+            this.gbLines.Controls.Add(this.label3);
+            this.gbLines.Controls.Add(this.tbMostExpensive);
+            this.gbLines.Controls.Add(this.label2);
             this.gbLines.Location = new System.Drawing.Point(283, 254);
             this.gbLines.Name = "gbLines";
             this.gbLines.Size = new System.Drawing.Size(226, 118);
             this.gbLines.TabIndex = 7;
             this.gbLines.TabStop = false;
             this.gbLines.Text = "Lines";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "The most expensive line:";
+            // 
+            // tbMostExpensive
+            // 
+            this.tbMostExpensive.Location = new System.Drawing.Point(26, 42);
+            this.tbMostExpensive.Name = "tbMostExpensive";
+            this.tbMostExpensive.Size = new System.Drawing.Size(167, 20);
+            this.tbMostExpensive.TabIndex = 1;
+            // 
+            // tbAveragePrice
+            // 
+            this.tbAveragePrice.Location = new System.Drawing.Point(26, 82);
+            this.tbAveragePrice.Name = "tbAveragePrice";
+            this.tbAveragePrice.Size = new System.Drawing.Size(167, 20);
+            this.tbAveragePrice.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "The average price of the lines";
             // 
             // Form1
             // 
@@ -126,6 +168,8 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busses";
+            this.gbLines.ResumeLayout(false);
+            this.gbLines.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +185,10 @@
         private System.Windows.Forms.Button btnDeleteBus;
         private System.Windows.Forms.Button btnAddLine;
         private System.Windows.Forms.GroupBox gbLines;
+        private System.Windows.Forms.TextBox tbAveragePrice;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbMostExpensive;
+        private System.Windows.Forms.Label label2;
     }
 }
 
